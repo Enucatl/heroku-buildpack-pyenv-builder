@@ -4,7 +4,8 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-source bin/utils
+BIN_DIR=$(cd $(dirname $0); pwd)  # absolute path
+source $BIN_DIR/utils
 puts-step "Cloning pyenv..."
 git clone https://github.com/yyuu/pyenv.git $BUILD_DIR/.pyenv &> /dev/null
 puts-step "Adding plugins..."
