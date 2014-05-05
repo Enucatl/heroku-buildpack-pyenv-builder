@@ -7,3 +7,5 @@ ENV_DIR=$3
 source bin/utils
 puts-step "Cloning pyenv..."
 git clone https://github.com/yyuu/pyenv.git $BUILD_DIR/.pyenv &> /dev/null
+puts-step "Adding plugins..."
+git clone https://github.com/yyuu/pyenv-pip-rehash.git $BUILD_DIR/.pyenv/plugins/pyenv-pip-rehash
