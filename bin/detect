@@ -1,4 +1,10 @@
 #!/bin/sh
 
 BUILD_DIR=$1
-echo Noop
+if [ -f $BUILD_DIR/.python-version ]
+then
+    echo PyenvBuilder
+    exit 0
+else
+    exit 1
+fi
