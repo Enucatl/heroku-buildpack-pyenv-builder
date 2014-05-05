@@ -10,4 +10,3 @@ export LD_LIBRARY_PATH=$PYENV_ROOT/lib:$LD_LIBRARY_PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-eval "$(pyenv init -)"
