@@ -15,3 +15,4 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $BUILD_DIR/.pyenv/plugins
 # copy the profile.d init files
 mkdir -p $BUILD_DIR/.profile.d
 cp -n $ROOT_DIR/.profile $BUILD_DIR/.profile
+cp -n $ROOT_DIR/.profile.d/* $BUILD_DIR/.profile.d
