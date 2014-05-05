@@ -3,8 +3,10 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
+BIN_DIR=$(cd $(dirname $0); pwd)  # absolute path
+ROOT_DIR=$(dirname $BIN_DIR)
 
-source utils
+source $BIN_DIR/utils
 puts-step "Cloning pyenv..."
 git clone https://github.com/yyuu/pyenv.git $BUILD_DIR/.pyenv &> /dev/null
 puts-step "Adding plugins..."
@@ -12,4 +14,4 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $BUILD_DIR/.pyenv/plugins
 
 # copy the profile.d init files
 mkdir -p $BUILD_DIR/.profile.d
-cp -n $BIN_DIR/../.profile.d/* $BUILD_DIR/.profile.d
+cp -n $ROOT_DIR/.profile.d/* $BUILD_DIR/.profile.d
