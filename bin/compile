@@ -8,7 +8,7 @@ ROOT_DIR=$(dirname $BIN_DIR)
 
 source $BIN_DIR/utils
 puts-step "Cloning pyenv..."
-git clone https://github.com/Enucatl/pyenv.git $BUILD_DIR/.pyenv &> /dev/null
+git clone https://github.com/yyuu/pyenv.git $BUILD_DIR/.pyenv &> /dev/null
 puts-step "Adding plugins..."
 git clone https://github.com/yyuu/pyenv-pip-rehash.git $BUILD_DIR/.pyenv/plugins/pyenv-pip-rehash &> /dev/null
 
